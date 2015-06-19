@@ -27,6 +27,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from blog.core.views import ArticlesViews, ArticleViews
+from blog.feeds import LastFiles
+
+
 urlpatterns = [
+    url(r'^$', ArticlesViews.as_view()),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^rss/(?P<url>.*)/$', LastFiles()),
+    url(r'^artigo/(?P<pk>\d+)/$', ArticleViews.as_view(), name='detalhe-do-artigo'),
 ]

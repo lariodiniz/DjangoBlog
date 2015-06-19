@@ -18,7 +18,8 @@ class ArticleTest(TestCase):
         self.obj =Article(
             title="Ola Mundo",
             content="OlaMundo",
-            date=timezone.now()
+            date=timezone.now(),
+            description='Primeiro artigo'
 
         )
     def test_create(self):
