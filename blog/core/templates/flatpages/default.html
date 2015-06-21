@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+{% block titulo %}{{ flatpage.title }} - {{ block.super }}{% endblock %}
+{% block content %}
+<div class="artigo">
+<h2> {{ flatpage.title }}</h2>
+<div class="conteudo">
+{{ flatpage.content }}
+</div>
+</div>
+{% endblock content %}	

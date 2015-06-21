@@ -1,0 +1,95 @@
+body {
+  font-family: arial;
+  background-color: #1e415e;
+  color: #333;
+}
+
+h1 {
+  margin: 10px 20px 10px 20px;
+
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* Layout */
+
+div#tudo {
+  position: absolute;
+  background-color: white;
+  margin: 20px 0 20px -390px;
+  width: 760px;
+  left: 50%;
+  border: 3px solid #aaa;
+}
+#topo {
+  font-size: 3em;
+  margin: 20px;
+}
+
+#banner {
+  margin: -20px -20px -30px -20px;
+}
+#foto {
+  margin: 5px 5px 5px 5px;
+  float: left;
+}
+.corpo {
+  margin: 5px 5px 0 5px;
+  background-color: #eee;
+}
+
+.artigo {
+  margin: 5px 5px 0 5px;
+}
+
+.rodape {
+  clear: both;
+  overflow: hidden;
+  background-color: #89a;
+  margin: 20px;
+  font-size: 0.8em;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.rodape a {
+  color: white;
+}
+/* Menu principal */
+
+#menu {
+  clear: both;
+  overflow: hidden;
+  background-color: #47a;
+  margin-top: 10px;
+  height: 26px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li {
+  float: left;
+  list-style: none;
+  padding: 5px;
+}
+
+#menu ul li a:link, #menu ul li a:visited, #menu ul li a:active {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+#menu ul li a:hover {
+  background-color: #79b;
+  color: white;
+}

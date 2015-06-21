@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% for artigo in object_list %}
+	<div class="artigo">
+		<a href="{{ artigo.get_absolute_url }}"><h2>{{ artigo.title }}</h2></a>
+		<div class="conteudo">
+			<P>Publicado há {{ artigo.date|timesince }}<br/>
+			{{ artigo.content }}
+		</div>
+	</div>
+{% endfor %}
+{% endblock content %}

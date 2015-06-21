@@ -43,6 +43,22 @@ class ArticleViewsTest(TestCase):
         "Acesso a /artigo/1/ deve retornar status code 200"
         self.assertEqual(200, self.resp.status_code)
 
+class SobreMimViewsTest(TestCase):
+    def setUp(self):
+        self.resp = self.client.get("/sobre-mim/")
+
+    def test_get(self):
+        "Acesso a /sobre-mim/ deve retornar status code 200"
+        self.assertEqual(200, self.resp.status_code)
+
+class ContactViewsTest(TestCase):
+    def setUp(self):
+        self.resp = self.client.get("/contato/")
+
+    def test_get(self):
+        "Acesso a /contato/ deve retornar status code 200"
+        self.assertEqual(200, self.resp.status_code)
+
 
 
 

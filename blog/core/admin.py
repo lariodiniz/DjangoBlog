@@ -15,4 +15,8 @@ from django.contrib import admin
 
 from blog.core.models import Article
 
-admin.site.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description','content')
+
+
+admin.site.register(Article, ArticleAdmin)

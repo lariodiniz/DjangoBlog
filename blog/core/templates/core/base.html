@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-Strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+	<head>
+		<title>{% block titulo %}Django Blog{% endblock %}</title>
+		{% block meta %}
+			<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+			<meta http-equiv="Content-Language" content="pt-br" />
+			<meta name="keywords" content="Python, Django, Lario Diniz, blog" />
+			<meta name="description" content="Este é o blog de Lario Diniz, um programador aprendendo Django." />
+		{% endblock meta %}
+		
+		{% block feeds %}
+			<link rel="alternate" type="application/rss+xml" title="Ultimos artigos do Lario" href="/rss/ultimos/" />
+		{% endblock feeds %}
+		
+		{% block style %}
+		{% load staticfiles %}
+			<link type="text/css" href="{% static 'core/css/style.css' %}" rel="stylesheet" media="screen" />
+		{% endblock style %}
+		
+		{% block scripts %}
+		{% endblock scripts %}
+	</head>
+	
+	<body>
+		<div id="tudo">
+			<div id="topo">
+			{% block topo %}
+				<div id="banner"><img src="{% static 'core/img/banner.gif' %}"></div>	
+								
+			{% endblock topo %}
+			</div>
+			
+			<div id="menu">
+			{% block menu %}
+			{% spaceless %}
+				<ul>
+					<li><a href="{% url 'homepage' %}">Pagina inicial</a></li>
+					<li><a href="/sobre-mim/">Sobre mim</a></li>
+					<li><a href="{% url 'contato' %}">Contato</a></li>
+				</ul>
+			{% endspaceless %}
+			{% endblock menu %}
+			</div>
+			<div id="foto">
+			<a id="img_home" class="home" href="{% url 'homepage' %}" title="voltar para home"><img src="{% static 'core/img/foto.jpg' %}" alt=""></a>
+			</div>
+			<h1></br>Um Simples blog feito em Django </br></br></br></h1>
+			<h2>{% block h2 %}{% endblock %}</h2>
+			<div class="corpo">				
+			{% block content %}
+			{% endblock content %}
+			</div>
+			{% include "core/botton.html" %}
+		</div>
+		
+	</body>
+</html>

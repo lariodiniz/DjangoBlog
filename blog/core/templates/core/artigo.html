@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}{{ object.title }} - {{ block.super }}{% endblock %}
+{% block content %}
+<div class="artigo">
+<h2> {{ object.title }}</h2>
+<div class="conteudo">
+{{ object.content }}
+</div>
+</div>
+{% endblock content %}	
